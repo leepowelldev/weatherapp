@@ -93,3 +93,5 @@ Steps
 - `npm install`
 - `bundle install`
 - `npm run pod-install`
+- `npm start`
+- `npm run ios`
