@@ -7,7 +7,11 @@ import {
   setSavedLocationsToStorage,
 } from '../utils/saved-locations-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { Layout, WeatherDataErrorMessage } from '../components';
+import {
+  CurrentLocationSummary,
+  Layout,
+  WeatherDataErrorMessage,
+} from '../components';
 
 export type SearchDetailScreenParams = {
   location: string;
@@ -63,24 +67,25 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
         if (isLoading) {
           return <Text>Loading...</Text>;
         }
-
         if (error) {
           return <WeatherDataErrorMessage error={error} />;
         }
-
-        return (
-          <>
-            <Text>{JSON.stringify(weatherData)}</Text>
-            {isSaved ? (
-              <Button
-                title="Delete from saved locations"
-                onPress={handleDelete}
-              />
-            ) : (
-              <Button title="Save to saved locations" onPress={handleSave} />
-            )}
-          </>
-        );
+        if (weatherData) {
+          return (
+            <>
+              <CurrentLocationSummary weatherData={weatherData} />
+              {isSaved ? (
+                <Button
+                  title="Delete from saved locations"
+                  onPress={handleDelete}
+                />
+              ) : (
+                <Button title="Save to saved locations" onPress={handleSave} />
+              )}
+            </>
+          );
+        }
+        return null;
       })()}
     </Layout>
   );
