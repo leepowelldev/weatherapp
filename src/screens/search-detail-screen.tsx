@@ -7,6 +7,7 @@ import {
   setSavedLocationsToStorage,
 } from '../utils/saved-locations-storage';
 import { useFocusEffect } from '@react-navigation/native';
+import { Layout, WeatherDataErrorMessage } from '../components';
 
 export type SearchDetailScreenParams = {
   location: string;
@@ -15,7 +16,7 @@ export type SearchDetailScreenParams = {
 export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
   const [savedLocations, setSavedLocations] = useState<Set<string>>(new Set());
 
-  const [weatherData] = useCurrentWeather(
+  const [weatherData, { isLoading, error }] = useCurrentWeather(
     `${route.params.location}, United Kingdom`
   );
 
@@ -29,11 +30,11 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
       setSavedLocationsToStorage(nextSavedLocations);
       setSavedLocations(nextSavedLocations);
     } catch {
-      Alert.alert('Error adding');
+      Alert.alert('Error saving');
     }
   }
 
-  async function handleRemove() {
+  async function handleDelete() {
     const nextSavedLocations = new Set(savedLocations);
     nextSavedLocations.delete(route.params.location);
 
@@ -41,7 +42,7 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
       setSavedLocationsToStorage(nextSavedLocations);
       setSavedLocations(nextSavedLocations);
     } catch {
-      Alert.alert('Error removing');
+      Alert.alert('Error deleting');
     }
   }
 
@@ -57,14 +58,30 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
   );
 
   return (
-    <>
-      <Text>{JSON.stringify(weatherData)}</Text>
-      {isSaved ? (
-        <Button title="Remove from saved locations" onPress={handleRemove} />
-      ) : (
-        <Button title="Add to saved locations" onPress={handleSave} />
-      )}
-      <Text>{JSON.stringify(Array.from(savedLocations))}</Text>
-    </>
+    <Layout>
+      {(() => {
+        if (isLoading) {
+          return <Text>Loading...</Text>;
+        }
+
+        if (error) {
+          return <WeatherDataErrorMessage error={error} />;
+        }
+
+        return (
+          <>
+            <Text>{JSON.stringify(weatherData)}</Text>
+            {isSaved ? (
+              <Button
+                title="Delete from saved locations"
+                onPress={handleDelete}
+              />
+            ) : (
+              <Button title="Save to saved locations" onPress={handleSave} />
+            )}
+          </>
+        );
+      })()}
+    </Layout>
   );
 }
