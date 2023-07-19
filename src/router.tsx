@@ -9,6 +9,7 @@ import {
   SearchIndexScreen,
   SavedIndexScreen,
   SavedDetailScreen,
+  SavedDetailScreenParams,
 } from './screens';
 import {
   BottomTabScreenProps,
@@ -45,7 +46,7 @@ export type SearchStackParamList = {
 
 export type SavedStackParamList = {
   Index: undefined;
-  Detail: undefined;
+  Detail: SavedDetailScreenParams;
 };
 
 /**
