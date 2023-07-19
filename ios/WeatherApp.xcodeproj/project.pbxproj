@@ -8,60 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* WeatherAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* WeatherAppTests.m */; };
+		089C29180922449CB792F54F /* 299.png in Resources */ = {isa = PBXBuildFile; fileRef = 540ACB039E7340BEA7B1E300 /* 299.png */; };
+		0BF723D9E17D47B78C3DBD22 /* 335.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0834CCCE644CD9D544AC2 /* 335.png */; };
 		0C80B921A6F3F58F76C31292 /* libPods-WeatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-WeatherApp.a */; };
+		1279F793D1CE4A5497D67875 /* 302.png in Resources */ = {isa = PBXBuildFile; fileRef = 92017B93420D45D380EF9CF5 /* 302.png */; };
+		12E8819273A443F3B51B33D5 /* 338.png in Resources */ = {isa = PBXBuildFile; fileRef = AC913C2B320D4948A19C703C /* 338.png */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-WeatherApp-WeatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WeatherApp-WeatherAppTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		41C55C79A28A4EC0B52935E8 /* 113.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE83582D5184AF39A923BE4 /* 113.png */; };
-		C2AE1C1AB7A544678E104DC3 /* 116.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF414DA9BB420AAF9AC194 /* 116.png */; };
-		FBA2B50C525648728AD23FCB /* 119.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B3CF7227AE48F39580570E /* 119.png */; };
-		84F4530FE4994442804D352B /* 122.png in Resources */ = {isa = PBXBuildFile; fileRef = 594A1A05B5F74BBCA1A65E99 /* 122.png */; };
-		74A9AF10809F44D0A9541A70 /* 143.png in Resources */ = {isa = PBXBuildFile; fileRef = A46E221B9B844E23929B610F /* 143.png */; };
-		8AB4138102694C07881E155A /* 176.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E5BF8983024A1E9970E315 /* 176.png */; };
-		F21D9A601E444533BEFD1B69 /* 179.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FA6C99FF548FE9FFC4BA1 /* 179.png */; };
-		CBAA40051CFF4129BCA3C650 /* 182.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E5D43472943F196A0EB55 /* 182.png */; };
-		9E3B921A24FC4B5A9434DA05 /* 185.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2D12D3F04A4F11BB9E9FD1 /* 185.png */; };
-		DE9E82078C1B4FA18FAB0C41 /* 200.png in Resources */ = {isa = PBXBuildFile; fileRef = 018B95E3FAF84D8786E1D51C /* 200.png */; };
-		466C300F858349539316744A /* 227.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FDDEB28C2140C9A7C12176 /* 227.png */; };
-		E8B6B9947FC2464580DB8C97 /* 230.png in Resources */ = {isa = PBXBuildFile; fileRef = 887741A0195640EA9BBC66DA /* 230.png */; };
+		1C2EF5FF47864BF291B85FCE /* 305.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1E6B565A5C47C088EC6B24 /* 305.png */; };
+		1D5701997C314A568DEC70C1 /* 326.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB81E26B353471994CCBC07 /* 326.png */; };
+		2AAD054D60BF4E16A71F884B /* 293.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C833543F63E40868C33F1DF /* 293.png */; };
 		3789BE600A1A456B884370E3 /* 248.png in Resources */ = {isa = PBXBuildFile; fileRef = 8618EFFF2A8040CB99380A47 /* 248.png */; };
+		39B810335A0F4B369F8D5611 /* 356.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336CDD4542A482E836FD33F /* 356.png */; };
+		3E9FA0187F0E48F3B673006C /* 329.png in Resources */ = {isa = PBXBuildFile; fileRef = 81615927677B4B04997149AB /* 329.png */; };
+		41C55C79A28A4EC0B52935E8 /* 113.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EE83582D5184AF39A923BE4 /* 113.png */; };
+		466C300F858349539316744A /* 227.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FDDEB28C2140C9A7C12176 /* 227.png */; };
+		488F8487D3204EC2A8E3C444 /* 362.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BEB091034D2487FD5668 /* 362.png */; };
 		4ACFDCF2F56A4776AD5E5D47 /* 260.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C22209CF5824237BBF068C0 /* 260.png */; };
 		59F437CB83A94FE3ACFA9D40 /* 263.png in Resources */ = {isa = PBXBuildFile; fileRef = B602F92C138E45BC9A7E0CC2 /* 263.png */; };
-		83BDF4C506FD46A99831B740 /* 266.png in Resources */ = {isa = PBXBuildFile; fileRef = D9336A6D1FF347EB9791C32B /* 266.png */; };
-		A845EB438F7743EF94A74ED2 /* 281.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D544D03B54443AB39B2A35 /* 281.png */; };
-		E032F2C5734641CDA5AEFE5E /* 284.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC749982B694BC0B0A57A04 /* 284.png */; };
-		2AAD054D60BF4E16A71F884B /* 293.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C833543F63E40868C33F1DF /* 293.png */; };
-		99BF83BE797F477591D53F22 /* 296.png in Resources */ = {isa = PBXBuildFile; fileRef = C26F6AB3AB4D40EC832B119C /* 296.png */; };
-		089C29180922449CB792F54F /* 299.png in Resources */ = {isa = PBXBuildFile; fileRef = 540ACB039E7340BEA7B1E300 /* 299.png */; };
-		1279F793D1CE4A5497D67875 /* 302.png in Resources */ = {isa = PBXBuildFile; fileRef = 92017B93420D45D380EF9CF5 /* 302.png */; };
-		1C2EF5FF47864BF291B85FCE /* 305.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1E6B565A5C47C088EC6B24 /* 305.png */; };
-		D22FE758420E4D48AD776A55 /* 308.png in Resources */ = {isa = PBXBuildFile; fileRef = 118234E6CDFC42329C8CF217 /* 308.png */; };
-		64788971D434413F8A09F9CB /* 311.png in Resources */ = {isa = PBXBuildFile; fileRef = A2EF5A8CC77344B6A1E3FE6A /* 311.png */; };
-		7813AE274BD946C991E9C56F /* 314.png in Resources */ = {isa = PBXBuildFile; fileRef = 72408D15B4DE483FA25D4742 /* 314.png */; };
-		B51E010E59EC4AC7A03D4740 /* 317.png in Resources */ = {isa = PBXBuildFile; fileRef = 1527B211AF5A4E56BD567C08 /* 317.png */; };
-		84B6184B01B14A8E9D792A97 /* 320.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BFBFAF79CE4BF38A5DE185 /* 320.png */; };
-		FB7E71A98DD14841A0DF675F /* 323.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9745D290F4FF2AFC70954 /* 323.png */; };
-		1D5701997C314A568DEC70C1 /* 326.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB81E26B353471994CCBC07 /* 326.png */; };
-		3E9FA0187F0E48F3B673006C /* 329.png in Resources */ = {isa = PBXBuildFile; fileRef = 81615927677B4B04997149AB /* 329.png */; };
-		E85552FDB77B42BB8DDECBEC /* 332.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C08458883DD45F5992205EE /* 332.png */; };
-		0BF723D9E17D47B78C3DBD22 /* 335.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B0834CCCE644CD9D544AC2 /* 335.png */; };
-		12E8819273A443F3B51B33D5 /* 338.png in Resources */ = {isa = PBXBuildFile; fileRef = AC913C2B320D4948A19C703C /* 338.png */; };
-		B07753136C0849D0B572CEA6 /* 350.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C3756F46EC4BA99045D04F /* 350.png */; };
-		CF9D8802DA6644C89B984D21 /* 353.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A9C7BB32447AB80B2A1C2 /* 353.png */; };
-		39B810335A0F4B369F8D5611 /* 356.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336CDD4542A482E836FD33F /* 356.png */; };
-		BCECEEF9863046B2A5E4A7B6 /* 359.png in Resources */ = {isa = PBXBuildFile; fileRef = A091B18C5C1D4121BBFF474C /* 359.png */; };
-		488F8487D3204EC2A8E3C444 /* 362.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E1BEB091034D2487FD5668 /* 362.png */; };
-		F3765C463EC342C68AB34F89 /* 365.png in Resources */ = {isa = PBXBuildFile; fileRef = 43AC28D785934051B8D26135 /* 365.png */; };
-		D522501583DE42C581DFD223 /* 368.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E425E364F3B4216A59EBED0 /* 368.png */; };
-		E5F14FEBEE224EBC84D15DF7 /* 371.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF5932B3CF246679E869768 /* 371.png */; };
-		D4D01935908945F7B9D88249 /* 374.png in Resources */ = {isa = PBXBuildFile; fileRef = A1F8EAFDF7A8467DADCE75DA /* 374.png */; };
-		FA416FFB24284A88A1A03A49 /* 377.png in Resources */ = {isa = PBXBuildFile; fileRef = 704DC6923B17457E88404608 /* 377.png */; };
-		62F918E1CB724BCA9CC79F40 /* 386.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AA2C15B1DC44D594D03840 /* 386.png */; };
-		7394E46C7370458D996EDBE1 /* 389.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD75448BF544D059F45505A /* 389.png */; };
-		B8FE70029D534B39BA3DF317 /* 392.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BBD6F64F1F4FB7A28D0D0C /* 392.png */; };
 		5AEC12C407B14A868C4E5E62 /* 395.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C251B9C5254116BFC449D2 /* 395.png */; };
+		62F918E1CB724BCA9CC79F40 /* 386.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AA2C15B1DC44D594D03840 /* 386.png */; };
+		64788971D434413F8A09F9CB /* 311.png in Resources */ = {isa = PBXBuildFile; fileRef = A2EF5A8CC77344B6A1E3FE6A /* 311.png */; };
+		7394E46C7370458D996EDBE1 /* 389.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FD75448BF544D059F45505A /* 389.png */; };
+		74A9AF10809F44D0A9541A70 /* 143.png in Resources */ = {isa = PBXBuildFile; fileRef = A46E221B9B844E23929B610F /* 143.png */; };
+		7699B88040F8A987B510C191 /* libPods-WeatherApp-WeatherAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-WeatherApp-WeatherAppTests.a */; };
+		7813AE274BD946C991E9C56F /* 314.png in Resources */ = {isa = PBXBuildFile; fileRef = 72408D15B4DE483FA25D4742 /* 314.png */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		83BDF4C506FD46A99831B740 /* 266.png in Resources */ = {isa = PBXBuildFile; fileRef = D9336A6D1FF347EB9791C32B /* 266.png */; };
+		84B6184B01B14A8E9D792A97 /* 320.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BFBFAF79CE4BF38A5DE185 /* 320.png */; };
+		84F4530FE4994442804D352B /* 122.png in Resources */ = {isa = PBXBuildFile; fileRef = 594A1A05B5F74BBCA1A65E99 /* 122.png */; };
+		8AB4138102694C07881E155A /* 176.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E5BF8983024A1E9970E315 /* 176.png */; };
+		99BF83BE797F477591D53F22 /* 296.png in Resources */ = {isa = PBXBuildFile; fileRef = C26F6AB3AB4D40EC832B119C /* 296.png */; };
+		9E3B921A24FC4B5A9434DA05 /* 185.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2D12D3F04A4F11BB9E9FD1 /* 185.png */; };
+		A845EB438F7743EF94A74ED2 /* 281.png in Resources */ = {isa = PBXBuildFile; fileRef = A6D544D03B54443AB39B2A35 /* 281.png */; };
+		B07753136C0849D0B572CEA6 /* 350.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C3756F46EC4BA99045D04F /* 350.png */; };
+		B51E010E59EC4AC7A03D4740 /* 317.png in Resources */ = {isa = PBXBuildFile; fileRef = 1527B211AF5A4E56BD567C08 /* 317.png */; };
+		B8FE70029D534B39BA3DF317 /* 392.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BBD6F64F1F4FB7A28D0D0C /* 392.png */; };
+		BCECEEF9863046B2A5E4A7B6 /* 359.png in Resources */ = {isa = PBXBuildFile; fileRef = A091B18C5C1D4121BBFF474C /* 359.png */; };
+		C2AE1C1AB7A544678E104DC3 /* 116.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF414DA9BB420AAF9AC194 /* 116.png */; };
+		CBAA40051CFF4129BCA3C650 /* 182.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B8E5D43472943F196A0EB55 /* 182.png */; };
+		CF9D8802DA6644C89B984D21 /* 353.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A0A9C7BB32447AB80B2A1C2 /* 353.png */; };
+		D22FE758420E4D48AD776A55 /* 308.png in Resources */ = {isa = PBXBuildFile; fileRef = 118234E6CDFC42329C8CF217 /* 308.png */; };
+		D4D01935908945F7B9D88249 /* 374.png in Resources */ = {isa = PBXBuildFile; fileRef = A1F8EAFDF7A8467DADCE75DA /* 374.png */; };
+		D522501583DE42C581DFD223 /* 368.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E425E364F3B4216A59EBED0 /* 368.png */; };
+		DE9E82078C1B4FA18FAB0C41 /* 200.png in Resources */ = {isa = PBXBuildFile; fileRef = 018B95E3FAF84D8786E1D51C /* 200.png */; };
+		E032F2C5734641CDA5AEFE5E /* 284.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC749982B694BC0B0A57A04 /* 284.png */; };
+		E5F14FEBEE224EBC84D15DF7 /* 371.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DF5932B3CF246679E869768 /* 371.png */; };
+		E85552FDB77B42BB8DDECBEC /* 332.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C08458883DD45F5992205EE /* 332.png */; };
+		E8B6B9947FC2464580DB8C97 /* 230.png in Resources */ = {isa = PBXBuildFile; fileRef = 887741A0195640EA9BBC66DA /* 230.png */; };
+		F21D9A601E444533BEFD1B69 /* 179.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FA6C99FF548FE9FFC4BA1 /* 179.png */; };
+		F3765C463EC342C68AB34F89 /* 365.png in Resources */ = {isa = PBXBuildFile; fileRef = 43AC28D785934051B8D26135 /* 365.png */; };
+		FA416FFB24284A88A1A03A49 /* 377.png in Resources */ = {isa = PBXBuildFile; fileRef = 704DC6923B17457E88404608 /* 377.png */; };
+		FB7E71A98DD14841A0DF675F /* 323.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9745D290F4FF2AFC70954 /* 323.png */; };
+		FBA2B50C525648728AD23FCB /* 119.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B3CF7227AE48F39580570E /* 119.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,68 +78,68 @@
 		00E356EE1AD99517003FC87E /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WeatherAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherAppTests.m; sourceTree = "<group>"; };
+		018B95E3FAF84D8786E1D51C /* 200.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 200.png; path = ../src/assets/icons/200.png; sourceTree = "<group>"; };
+		09B0834CCCE644CD9D544AC2 /* 335.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 335.png; path = ../src/assets/icons/335.png; sourceTree = "<group>"; };
+		0B8E5D43472943F196A0EB55 /* 182.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 182.png; path = ../src/assets/icons/182.png; sourceTree = "<group>"; };
+		0C08458883DD45F5992205EE /* 332.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 332.png; path = ../src/assets/icons/332.png; sourceTree = "<group>"; };
+		0DF5932B3CF246679E869768 /* 371.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 371.png; path = ../src/assets/icons/371.png; sourceTree = "<group>"; };
+		118234E6CDFC42329C8CF217 /* 308.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 308.png; path = ../src/assets/icons/308.png; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WeatherApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = WeatherApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WeatherApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WeatherApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WeatherApp/main.m; sourceTree = "<group>"; };
+		1527B211AF5A4E56BD567C08 /* 317.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 317.png; path = ../src/assets/icons/317.png; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-WeatherApp-WeatherAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp-WeatherAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0A9C7BB32447AB80B2A1C2 /* 353.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 353.png; path = ../src/assets/icons/353.png; sourceTree = "<group>"; };
+		20BFBFAF79CE4BF38A5DE185 /* 320.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 320.png; path = ../src/assets/icons/320.png; sourceTree = "<group>"; };
+		2EE83582D5184AF39A923BE4 /* 113.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 113.png; path = ../src/assets/icons/113.png; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3E425E364F3B4216A59EBED0 /* 368.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 368.png; path = ../src/assets/icons/368.png; sourceTree = "<group>"; };
+		43AC28D785934051B8D26135 /* 365.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 365.png; path = ../src/assets/icons/365.png; sourceTree = "<group>"; };
+		46FDDEB28C2140C9A7C12176 /* 227.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 227.png; path = ../src/assets/icons/227.png; sourceTree = "<group>"; };
+		4BC749982B694BC0B0A57A04 /* 284.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 284.png; path = ../src/assets/icons/284.png; sourceTree = "<group>"; };
+		4C22209CF5824237BBF068C0 /* 260.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 260.png; path = ../src/assets/icons/260.png; sourceTree = "<group>"; };
+		52C3756F46EC4BA99045D04F /* 350.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 350.png; path = ../src/assets/icons/350.png; sourceTree = "<group>"; };
+		5336CDD4542A482E836FD33F /* 356.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 356.png; path = ../src/assets/icons/356.png; sourceTree = "<group>"; };
+		540ACB039E7340BEA7B1E300 /* 299.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 299.png; path = ../src/assets/icons/299.png; sourceTree = "<group>"; };
+		56BBD6F64F1F4FB7A28D0D0C /* 392.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 392.png; path = ../src/assets/icons/392.png; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		594A1A05B5F74BBCA1A65E99 /* 122.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 122.png; path = ../src/assets/icons/122.png; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-WeatherApp-WeatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-WeatherAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherApp-WeatherAppTests/Pods-WeatherApp-WeatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-WeatherApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA9745D290F4FF2AFC70954 /* 323.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 323.png; path = ../src/assets/icons/323.png; sourceTree = "<group>"; };
+		6C833543F63E40868C33F1DF /* 293.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 293.png; path = ../src/assets/icons/293.png; sourceTree = "<group>"; };
+		704DC6923B17457E88404608 /* 377.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 377.png; path = ../src/assets/icons/377.png; sourceTree = "<group>"; };
+		72408D15B4DE483FA25D4742 /* 314.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 314.png; path = ../src/assets/icons/314.png; sourceTree = "<group>"; };
+		75C251B9C5254116BFC449D2 /* 395.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 395.png; path = ../src/assets/icons/395.png; sourceTree = "<group>"; };
+		7CB81E26B353471994CCBC07 /* 326.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 326.png; path = ../src/assets/icons/326.png; sourceTree = "<group>"; };
+		81615927677B4B04997149AB /* 329.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 329.png; path = ../src/assets/icons/329.png; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WeatherApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8618EFFF2A8040CB99380A47 /* 248.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 248.png; path = ../src/assets/icons/248.png; sourceTree = "<group>"; };
+		887741A0195640EA9BBC66DA /* 230.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 230.png; path = ../src/assets/icons/230.png; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-WeatherApp-WeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp-WeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherApp-WeatherAppTests/Pods-WeatherApp-WeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E9FA6C99FF548FE9FFC4BA1 /* 179.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 179.png; path = ../src/assets/icons/179.png; sourceTree = "<group>"; };
+		8FD75448BF544D059F45505A /* 389.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 389.png; path = ../src/assets/icons/389.png; sourceTree = "<group>"; };
+		92017B93420D45D380EF9CF5 /* 302.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 302.png; path = ../src/assets/icons/302.png; sourceTree = "<group>"; };
+		A091B18C5C1D4121BBFF474C /* 359.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 359.png; path = ../src/assets/icons/359.png; sourceTree = "<group>"; };
+		A1F8EAFDF7A8467DADCE75DA /* 374.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 374.png; path = ../src/assets/icons/374.png; sourceTree = "<group>"; };
+		A2EF5A8CC77344B6A1E3FE6A /* 311.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 311.png; path = ../src/assets/icons/311.png; sourceTree = "<group>"; };
+		A46E221B9B844E23929B610F /* 143.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 143.png; path = ../src/assets/icons/143.png; sourceTree = "<group>"; };
+		A6D544D03B54443AB39B2A35 /* 281.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 281.png; path = ../src/assets/icons/281.png; sourceTree = "<group>"; };
+		AC913C2B320D4948A19C703C /* 338.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 338.png; path = ../src/assets/icons/338.png; sourceTree = "<group>"; };
+		B602F92C138E45BC9A7E0CC2 /* 263.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 263.png; path = ../src/assets/icons/263.png; sourceTree = "<group>"; };
+		B8E1BEB091034D2487FD5668 /* 362.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 362.png; path = ../src/assets/icons/362.png; sourceTree = "<group>"; };
+		BA2D12D3F04A4F11BB9E9FD1 /* 185.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 185.png; path = ../src/assets/icons/185.png; sourceTree = "<group>"; };
+		C26F6AB3AB4D40EC832B119C /* 296.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 296.png; path = ../src/assets/icons/296.png; sourceTree = "<group>"; };
+		C2E5BF8983024A1E9970E315 /* 176.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 176.png; path = ../src/assets/icons/176.png; sourceTree = "<group>"; };
+		C4BF414DA9BB420AAF9AC194 /* 116.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 116.png; path = ../src/assets/icons/116.png; sourceTree = "<group>"; };
+		CC1E6B565A5C47C088EC6B24 /* 305.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 305.png; path = ../src/assets/icons/305.png; sourceTree = "<group>"; };
+		D9336A6D1FF347EB9791C32B /* 266.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 266.png; path = ../src/assets/icons/266.png; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		2EE83582D5184AF39A923BE4 /* 113.png */ = {isa = PBXFileReference; name = "113.png"; path = "../src/assets/icons/113.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C4BF414DA9BB420AAF9AC194 /* 116.png */ = {isa = PBXFileReference; name = "116.png"; path = "../src/assets/icons/116.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F8B3CF7227AE48F39580570E /* 119.png */ = {isa = PBXFileReference; name = "119.png"; path = "../src/assets/icons/119.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		594A1A05B5F74BBCA1A65E99 /* 122.png */ = {isa = PBXFileReference; name = "122.png"; path = "../src/assets/icons/122.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A46E221B9B844E23929B610F /* 143.png */ = {isa = PBXFileReference; name = "143.png"; path = "../src/assets/icons/143.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C2E5BF8983024A1E9970E315 /* 176.png */ = {isa = PBXFileReference; name = "176.png"; path = "../src/assets/icons/176.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8E9FA6C99FF548FE9FFC4BA1 /* 179.png */ = {isa = PBXFileReference; name = "179.png"; path = "../src/assets/icons/179.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0B8E5D43472943F196A0EB55 /* 182.png */ = {isa = PBXFileReference; name = "182.png"; path = "../src/assets/icons/182.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BA2D12D3F04A4F11BB9E9FD1 /* 185.png */ = {isa = PBXFileReference; name = "185.png"; path = "../src/assets/icons/185.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		018B95E3FAF84D8786E1D51C /* 200.png */ = {isa = PBXFileReference; name = "200.png"; path = "../src/assets/icons/200.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		46FDDEB28C2140C9A7C12176 /* 227.png */ = {isa = PBXFileReference; name = "227.png"; path = "../src/assets/icons/227.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		887741A0195640EA9BBC66DA /* 230.png */ = {isa = PBXFileReference; name = "230.png"; path = "../src/assets/icons/230.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8618EFFF2A8040CB99380A47 /* 248.png */ = {isa = PBXFileReference; name = "248.png"; path = "../src/assets/icons/248.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4C22209CF5824237BBF068C0 /* 260.png */ = {isa = PBXFileReference; name = "260.png"; path = "../src/assets/icons/260.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B602F92C138E45BC9A7E0CC2 /* 263.png */ = {isa = PBXFileReference; name = "263.png"; path = "../src/assets/icons/263.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D9336A6D1FF347EB9791C32B /* 266.png */ = {isa = PBXFileReference; name = "266.png"; path = "../src/assets/icons/266.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A6D544D03B54443AB39B2A35 /* 281.png */ = {isa = PBXFileReference; name = "281.png"; path = "../src/assets/icons/281.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4BC749982B694BC0B0A57A04 /* 284.png */ = {isa = PBXFileReference; name = "284.png"; path = "../src/assets/icons/284.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6C833543F63E40868C33F1DF /* 293.png */ = {isa = PBXFileReference; name = "293.png"; path = "../src/assets/icons/293.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C26F6AB3AB4D40EC832B119C /* 296.png */ = {isa = PBXFileReference; name = "296.png"; path = "../src/assets/icons/296.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		540ACB039E7340BEA7B1E300 /* 299.png */ = {isa = PBXFileReference; name = "299.png"; path = "../src/assets/icons/299.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		92017B93420D45D380EF9CF5 /* 302.png */ = {isa = PBXFileReference; name = "302.png"; path = "../src/assets/icons/302.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CC1E6B565A5C47C088EC6B24 /* 305.png */ = {isa = PBXFileReference; name = "305.png"; path = "../src/assets/icons/305.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		118234E6CDFC42329C8CF217 /* 308.png */ = {isa = PBXFileReference; name = "308.png"; path = "../src/assets/icons/308.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A2EF5A8CC77344B6A1E3FE6A /* 311.png */ = {isa = PBXFileReference; name = "311.png"; path = "../src/assets/icons/311.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		72408D15B4DE483FA25D4742 /* 314.png */ = {isa = PBXFileReference; name = "314.png"; path = "../src/assets/icons/314.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1527B211AF5A4E56BD567C08 /* 317.png */ = {isa = PBXFileReference; name = "317.png"; path = "../src/assets/icons/317.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		20BFBFAF79CE4BF38A5DE185 /* 320.png */ = {isa = PBXFileReference; name = "320.png"; path = "../src/assets/icons/320.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6AA9745D290F4FF2AFC70954 /* 323.png */ = {isa = PBXFileReference; name = "323.png"; path = "../src/assets/icons/323.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7CB81E26B353471994CCBC07 /* 326.png */ = {isa = PBXFileReference; name = "326.png"; path = "../src/assets/icons/326.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		81615927677B4B04997149AB /* 329.png */ = {isa = PBXFileReference; name = "329.png"; path = "../src/assets/icons/329.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0C08458883DD45F5992205EE /* 332.png */ = {isa = PBXFileReference; name = "332.png"; path = "../src/assets/icons/332.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		09B0834CCCE644CD9D544AC2 /* 335.png */ = {isa = PBXFileReference; name = "335.png"; path = "../src/assets/icons/335.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AC913C2B320D4948A19C703C /* 338.png */ = {isa = PBXFileReference; name = "338.png"; path = "../src/assets/icons/338.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		52C3756F46EC4BA99045D04F /* 350.png */ = {isa = PBXFileReference; name = "350.png"; path = "../src/assets/icons/350.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1A0A9C7BB32447AB80B2A1C2 /* 353.png */ = {isa = PBXFileReference; name = "353.png"; path = "../src/assets/icons/353.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5336CDD4542A482E836FD33F /* 356.png */ = {isa = PBXFileReference; name = "356.png"; path = "../src/assets/icons/356.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A091B18C5C1D4121BBFF474C /* 359.png */ = {isa = PBXFileReference; name = "359.png"; path = "../src/assets/icons/359.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B8E1BEB091034D2487FD5668 /* 362.png */ = {isa = PBXFileReference; name = "362.png"; path = "../src/assets/icons/362.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		43AC28D785934051B8D26135 /* 365.png */ = {isa = PBXFileReference; name = "365.png"; path = "../src/assets/icons/365.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3E425E364F3B4216A59EBED0 /* 368.png */ = {isa = PBXFileReference; name = "368.png"; path = "../src/assets/icons/368.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0DF5932B3CF246679E869768 /* 371.png */ = {isa = PBXFileReference; name = "371.png"; path = "../src/assets/icons/371.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A1F8EAFDF7A8467DADCE75DA /* 374.png */ = {isa = PBXFileReference; name = "374.png"; path = "../src/assets/icons/374.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		704DC6923B17457E88404608 /* 377.png */ = {isa = PBXFileReference; name = "377.png"; path = "../src/assets/icons/377.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F7AA2C15B1DC44D594D03840 /* 386.png */ = {isa = PBXFileReference; name = "386.png"; path = "../src/assets/icons/386.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8FD75448BF544D059F45505A /* 389.png */ = {isa = PBXFileReference; name = "389.png"; path = "../src/assets/icons/389.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		56BBD6F64F1F4FB7A28D0D0C /* 392.png */ = {isa = PBXFileReference; name = "392.png"; path = "../src/assets/icons/392.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		75C251B9C5254116BFC449D2 /* 395.png */ = {isa = PBXFileReference; name = "395.png"; path = "../src/assets/icons/395.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F7AA2C15B1DC44D594D03840 /* 386.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 386.png; path = ../src/assets/icons/386.png; sourceTree = "<group>"; };
+		F8B3CF7227AE48F39580570E /* 119.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = 119.png; path = ../src/assets/icons/119.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,51 +202,8 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		83CBB9F61A601CBA00E9B192 = {
-			isa = PBXGroup;
-			children = (
-				13B07FAE1A68108700A75B9A /* WeatherApp */,
-				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* WeatherAppTests */,
-				83CBBA001A601CBA00E9B192 /* Products */,
-				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				35F3906894C84248AE1DD044 /* Resources */,
-			);
-			indentWidth = 2;
-			sourceTree = "<group>";
-			tabWidth = 2;
-			usesTabs = 0;
-		};
-		83CBBA001A601CBA00E9B192 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13B07F961A680F5B00A75B9A /* WeatherApp.app */,
-				00E356EE1AD99517003FC87E /* WeatherAppTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-WeatherApp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-WeatherApp.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-WeatherApp-WeatherAppTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-WeatherApp-WeatherAppTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		35F3906894C84248AE1DD044 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				2EE83582D5184AF39A923BE4 /* 113.png */,
 				C4BF414DA9BB420AAF9AC194 /* 116.png */,
@@ -298,8 +255,51 @@
 				75C251B9C5254116BFC449D2 /* 395.png */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* WeatherApp */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* WeatherAppTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				35F3906894C84248AE1DD044 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* WeatherApp.app */,
+				00E356EE1AD99517003FC87E /* WeatherAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-WeatherApp.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-WeatherApp.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-WeatherApp-WeatherAppTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-WeatherApp-WeatherAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
