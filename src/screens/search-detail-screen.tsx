@@ -1,31 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Alert, Button, Text } from 'react-native';
 import { SearchDetailScreenProps } from '../router';
 import { useCurrentWeather } from '../hooks';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  getSavedLocationsFromStorage,
+  setSavedLocationsToStorage,
+} from '../utils/saved-locations-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 export type SearchDetailScreenParams = {
   location: string;
 };
 
 export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
-  const [savedLocations, setSavedLocations] = useState<Set<string>>(
-    new Set([])
-  );
+  const [savedLocations, setSavedLocations] = useState<Set<string>>(new Set());
 
   const [weatherData] = useCurrentWeather(
     `${route.params.location}, United Kingdom`
   );
+
+  const isSaved = savedLocations.has(route.params.location);
 
   async function handleSave() {
     const nextSavedLocations = new Set(savedLocations);
     nextSavedLocations.add(route.params.location);
 
     try {
-      AsyncStorage.setItem(
-        '@saved_locations',
-        JSON.stringify(Array.from(nextSavedLocations))
-      );
+      setSavedLocationsToStorage(nextSavedLocations);
       setSavedLocations(nextSavedLocations);
     } catch {
       Alert.alert('Error adding');
@@ -37,25 +38,23 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
     nextSavedLocations.delete(route.params.location);
 
     try {
-      AsyncStorage.setItem(
-        '@saved_locations',
-        JSON.stringify(Array.from(nextSavedLocations))
-      );
+      setSavedLocationsToStorage(nextSavedLocations);
       setSavedLocations(nextSavedLocations);
     } catch {
       Alert.alert('Error removing');
     }
   }
 
-  useEffect(() => {
-    AsyncStorage.getItem('@saved_locations').then((item) => {
-      if (item !== null) {
-        setSavedLocations(new Set(JSON.parse(item)));
-      }
-    });
-  }, []);
-
-  const isSaved = savedLocations.has(route.params.location);
+  useFocusEffect(
+    useCallback(() => {
+      getSavedLocationsFromStorage().then((locations) => {
+        if (locations === null) {
+          return setSavedLocations(new Set());
+        }
+        setSavedLocations(locations);
+      });
+    }, [])
+  );
 
   return (
     <>
