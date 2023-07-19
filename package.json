@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "pod-install": "npx pod-install"
+    "pod-install": "npx pod-install",
+    "link-assets": "npx react-native-asset"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.8",
