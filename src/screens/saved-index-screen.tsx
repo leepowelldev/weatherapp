@@ -1,8 +1,11 @@
-import React, { useCallback, useState } from 'react';
-import { Button, Text } from 'react-native';
+import React, { Fragment, useCallback, useState } from 'react';
+import { Alert, Button, Text } from 'react-native';
 import { Layout } from '../components';
 import { useFocusEffect } from '@react-navigation/native';
-import { getSavedLocationsFromStorage } from '../utils/saved-locations-storage';
+import {
+  getSavedLocationsFromStorage,
+  setSavedLocationsToStorage,
+} from '../utils/saved-locations-storage';
 import { SavedIndexScreenProps } from '../router';
 
 export function SavedIndexScreen({
@@ -12,6 +15,18 @@ export function SavedIndexScreen({
 
   function handlePress(location: string) {
     navigation.navigate('Detail', { location });
+  }
+
+  function handleRemove(location: string) {
+    const nextSavedLocations = new Set(savedLocations);
+    nextSavedLocations.delete(location);
+
+    try {
+      setSavedLocationsToStorage(nextSavedLocations);
+      setSavedLocations(nextSavedLocations);
+    } catch {
+      Alert.alert('Error removing');
+    }
   }
 
   useFocusEffect(
@@ -27,13 +42,11 @@ export function SavedIndexScreen({
 
   return (
     <Layout>
-      <Text>Saved Index</Text>
       {Array.from(savedLocations).map((location) => (
-        <Button
-          key={location}
-          title={location}
-          onPress={() => handlePress(location)}
-        />
+        <Fragment key={location}>
+          <Button title={location} onPress={() => handlePress(location)} />
+          <Button title="Remove" onPress={() => handleRemove(location)} />
+        </Fragment>
       ))}
     </Layout>
   );
