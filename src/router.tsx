@@ -6,7 +6,7 @@ import {
 import {
   CurrentLocationIndexScreen,
   CurrentLocationForecastScreen,
-  SearchScreen,
+  SearchIndexScreen,
   SavedIndexScreen,
   SavedDetailScreen,
 } from './screens';
@@ -18,13 +18,89 @@ import {
   CompositeScreenProps,
   NavigatorScreenParams,
 } from '@react-navigation/native';
+import {
+  SearchDetailScreen,
+  SearchDetailScreenParams,
+} from './screens/search-detail-screen';
+
+/**
+ * PARAMETER LISTS
+ */
+
+export type RootTabsParamList = {
+  CurrentLocation: NavigatorScreenParams<CurrentLocationStackParamList>;
+  Search: undefined;
+  Saved: NavigatorScreenParams<SavedStackParamList>;
+};
+
+export type CurrentLocationStackParamList = {
+  Index: undefined;
+  Forecast: undefined;
+};
+
+export type SearchStackParamList = {
+  Index: undefined;
+  Detail: SearchDetailScreenParams;
+};
+
+export type SavedStackParamList = {
+  Index: undefined;
+  Detail: undefined;
+};
+
+/**
+ * SCREEN PROPS
+ */
+
+export type CurrentLocationIndexScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<CurrentLocationStackParamList, 'Index'>,
+  BottomTabScreenProps<RootTabsParamList, 'CurrentLocation'>
+>;
+
+export type CurrentLocationForecastScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<CurrentLocationStackParamList, 'Forecast'>,
+  BottomTabScreenProps<RootTabsParamList, 'CurrentLocation'>
+>;
+
+export type SearchIndexScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<SearchStackParamList, 'Index'>,
+  BottomTabScreenProps<RootTabsParamList, 'Search'>
+>;
+
+export type SearchDetailScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<SearchStackParamList, 'Detail'>,
+  BottomTabScreenProps<RootTabsParamList, 'Search'>
+>;
+
+export type SavedIndexScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<SavedStackParamList, 'Index'>,
+  BottomTabScreenProps<RootTabsParamList, 'Saved'>
+>;
+
+export type SavedDetailScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<SavedStackParamList, 'Detail'>,
+  BottomTabScreenProps<RootTabsParamList, 'Saved'>
+>;
+
+/**
+ * NAVIGATORS
+ */
+
+const { Navigator: RootTabsNavigator, Screen: RootTabsScreen } =
+  createBottomTabNavigator<RootTabsParamList>();
 
 const { Navigator: CurrentLocationNavigator, Screen: CurrentLocationScreen } =
-  createNativeStackNavigator();
+  createNativeStackNavigator<CurrentLocationStackParamList>();
+
+const { Navigator: SearchNavigator, Screen: SearchScreen } =
+  createNativeStackNavigator<SearchStackParamList>();
+
 const { Navigator: SavedNavigator, Screen: SavedScreen } =
-  createNativeStackNavigator();
-const { Navigator: RootTabsNavigator, Screen: RootTabsScreen } =
-  createBottomTabNavigator();
+  createNativeStackNavigator<SavedStackParamList>();
+
+/**
+ * STACK COMPONENTS
+ */
 
 function CurrentLocationStack(): JSX.Element {
   return (
@@ -50,61 +126,25 @@ function SavedStack(): JSX.Element {
   );
 }
 
-export function Router(): JSX.Element {
+function SearchStack(): JSX.Element {
   return (
-    <RootTabsNavigator initialRouteName="CurrentLocation">
-      <RootTabsScreen name="CurrentLocation" component={CurrentLocationStack} />
-      <RootTabsScreen name="Search" component={SearchScreen} />
-      <RootTabsScreen name="Saved" component={SavedStack} />
-    </RootTabsNavigator>
+    <SearchNavigator initialRouteName="Index">
+      <SearchScreen name="Index" component={SearchIndexScreen} />
+      <SearchScreen name="Detail" component={SearchDetailScreen} />
+    </SearchNavigator>
   );
 }
 
 /**
- * PARAMETER LISTS
+ * ROUTER
  */
 
-export type CurrentLocationStackParamList = {
-  Index: undefined;
-  Forecast: undefined;
-};
-
-export type SavedStackParamList = {
-  Index: undefined;
-  Detail: undefined;
-};
-
-export type RootTabsParamList = {
-  CurrentLocation: NavigatorScreenParams<CurrentLocationStackParamList>;
-  Search: undefined;
-  Saved: NavigatorScreenParams<SavedStackParamList>;
-};
-
-/**
- * SCREEN PROPS
- */
-
-export type CurrentLocationIndexScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<CurrentLocationStackParamList, 'Index'>,
-  BottomTabScreenProps<RootTabsParamList, 'CurrentLocation'>
->;
-
-export type CurrentLocationForecastScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<CurrentLocationStackParamList, 'Forecast'>,
-  BottomTabScreenProps<RootTabsParamList, 'CurrentLocation'>
->;
-
-export type SearchScreenProps = BottomTabScreenProps<
-  RootTabsParamList,
-  'Search'
->;
-
-export type SavedIndexScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<SavedStackParamList, 'Index'>,
-  BottomTabScreenProps<RootTabsParamList, 'Saved'>
->;
-
-export type SavedDetailScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<SavedStackParamList, 'Detail'>,
-  BottomTabScreenProps<RootTabsParamList, 'Saved'>
->;
+export function Router(): JSX.Element {
+  return (
+    <RootTabsNavigator initialRouteName="CurrentLocation">
+      <RootTabsScreen name="CurrentLocation" component={CurrentLocationStack} />
+      <RootTabsScreen name="Search" component={SearchStack} />
+      <RootTabsScreen name="Saved" component={SavedStack} />
+    </RootTabsNavigator>
+  );
+}

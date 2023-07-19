@@ -9,14 +9,17 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Router } from './router';
+import { CurrentLocationProvider } from './contexts';
 import './env';
 
 export function App(): JSX.Element {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
-        <Router />
-      </NavigationContainer>
+      <CurrentLocationProvider>
+        <NavigationContainer>
+          <Router />
+        </NavigationContainer>
+      </CurrentLocationProvider>
     </SafeAreaProvider>
   );
 }
