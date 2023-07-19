@@ -6,9 +6,10 @@ import React, {
   useMemo,
   useReducer,
 } from 'react';
-import { LatLong } from '../types';
 import { hasLocationPermission } from '../utils/permissions';
 import Geolocation, { GeoError } from 'react-native-geolocation-service';
+
+type LatLong = `${number},${number}`;
 
 const CurrentLocationContext = createContext<Readonly<
   [State['currentLocation'], Omit<State, 'currentLocation'>]
