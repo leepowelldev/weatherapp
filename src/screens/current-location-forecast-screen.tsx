@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ScrollView, Text } from 'react-native';
 import {
   CurrentLocationErrorMessage,
   Layout,
   WeatherDataErrorMessage,
-  WeatherIcon,
+  WeatherForecast,
 } from '../components';
 import { useForecastWeather } from '../hooks';
 import { useCurrentLocation } from '../contexts';
@@ -36,25 +36,7 @@ export function CurrentLocationForecastScreen(): JSX.Element {
             return <WeatherDataErrorMessage error={weatherDataError} />;
           }
           if (weatherData) {
-            return (
-              <>
-                <Text>{weatherData.location.name}</Text>
-                <Text>
-                  {weatherData.location.region} / {weatherData.location.country}
-                </Text>
-                <Text>Last Updated: {weatherData.current.last_updated}</Text>
-                {weatherData.forecast.forecastday.map(({ date, day }) => {
-                  return (
-                    <Fragment key={date}>
-                      <Text>{date}</Text>
-                      <WeatherIcon code={day.condition.code} />
-                      <Text>High: {day.maxtemp_c}</Text>
-                      <Text>Low: {day.mintemp_c}</Text>
-                    </Fragment>
-                  );
-                })}
-              </>
-            );
+            return <WeatherForecast data={weatherData} />;
           }
           return null;
         })()}

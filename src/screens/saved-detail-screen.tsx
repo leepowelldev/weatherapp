@@ -1,10 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Alert, Button, Text } from 'react-native';
-import {
-  CurrentLocationSummary,
-  Layout,
-  WeatherDataErrorMessage,
-} from '../components';
+import { WeatherSummary, Layout, WeatherDataErrorMessage } from '../components';
 import { SavedDetailScreenProps } from '../router';
 import { useCurrentWeather } from '../hooks';
 import { useFocusEffect } from '@react-navigation/native';
@@ -67,7 +63,7 @@ export function SavedDetailScreen({
         if (weatherData) {
           return (
             <>
-              <CurrentLocationSummary weatherData={weatherData} />
+              <WeatherSummary data={weatherData} />
               <Button
                 title="Delete from saved locations"
                 onPress={handleDelete}
