@@ -1,15 +1,18 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { Layout } from '../components';
+import { SavedDetailScreenProps } from '../router';
 
 export type SavedDetailScreenParams = {
   location: string;
 };
 
-export function SavedDetailScreen(): JSX.Element {
+export function SavedDetailScreen({
+  route,
+}: SavedDetailScreenProps): JSX.Element {
   return (
     <Layout>
-      <Text>Saved Detail</Text>
+      <Text>{route.params.location}</Text>
     </Layout>
   );
 }
