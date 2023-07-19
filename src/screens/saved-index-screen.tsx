@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Button } from 'react-native';
+import { Button, Text } from 'react-native';
 import { Layout } from '../components';
 import { useFocusEffect } from '@react-navigation/native';
 import { getSavedLocationsFromStorage } from '../utils/saved-locations-storage';
@@ -25,15 +25,23 @@ export function SavedIndexScreen({
     }, [])
   );
 
+  const savedLocationsArray = Array.from(savedLocations);
+
   return (
     <Layout>
-      {Array.from(savedLocations).map((location) => (
-        <Button
-          key={location}
-          title={location}
-          onPress={() => handlePress(location)}
-        />
-      ))}
+      {(() => {
+        if (savedLocationsArray.length === 0) {
+          return <Text>No saved locations found.</Text>;
+        }
+
+        return savedLocationsArray.map((location) => (
+          <Button
+            key={location}
+            title={location}
+            onPress={() => handlePress(location)}
+          />
+        ));
+      })()}
     </Layout>
   );
 }
