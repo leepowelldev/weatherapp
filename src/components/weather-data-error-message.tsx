@@ -1,6 +1,7 @@
-import { Link } from '@react-navigation/native';
 import React from 'react';
-import { Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'react-native-paper';
+import { ErrorIcon } from './error-icon';
 
 export type WeatherDataErrorMessageProps = {
   error: Error;
@@ -9,33 +10,35 @@ export type WeatherDataErrorMessageProps = {
 export function WeatherDataErrorMessage({
   error,
 }: WeatherDataErrorMessageProps) {
-  if (error.message === '1006') {
-    return (
-      <Text>
-        Sorry, we do not have data for this location, please try another.
-      </Text>
+  let text: string;
+
+  if (__DEV__ && error.message !== '1006') {
+    console.error(
+      `Error code: ${error.message} - See https://www.weatherapi.com/docs/#intro-error-codes`
     );
   }
 
-  if (__DEV__) {
-    return (
-      <>
-        <Text>Error code: {error.message}</Text>
-        <Text>
-          See{' '}
-          <Link to="https://www.weatherapi.com/docs/#intro-error-codes">
-            https://www.weatherapi.com/docs/#intro-error-codes
-          </Link>{' '}
-          for details.
-        </Text>
-      </>
-    );
+  if (error.message === '1006') {
+    text = 'Sorry, we do not have data for this location, please try another.';
   }
+
+  text =
+    'There has been a problem retrieving the data for your current location. Please try again later.';
 
   return (
-    <Text>
-      There has been a problem retrieving the data for your current location.
-      Please try again later.
-    </Text>
+    <View style={styles.root}>
+      <ErrorIcon />
+      <Text style={styles.text}>{text}</Text>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  root: {
+    alignItems: 'center',
+  },
+  text: {
+    marginTop: 20,
+    textAlign: 'center',
+  },
+});

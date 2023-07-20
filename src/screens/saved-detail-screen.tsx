@@ -1,6 +1,12 @@
 import React, { useCallback, useState } from 'react';
-import { Alert, Button, Text } from 'react-native';
-import { WeatherSummary, Layout, WeatherDataErrorMessage } from '../components';
+import { Alert, StyleSheet, View } from 'react-native';
+import {
+  WeatherSummary,
+  Layout,
+  WeatherDataErrorMessage,
+  LoadingIndicator,
+  Button,
+} from '../components';
 import { SavedDetailScreenProps } from '../router';
 import { useCurrentWeather } from '../hooks';
 import { useFocusEffect } from '@react-navigation/native';
@@ -55,20 +61,17 @@ export function SavedDetailScreen({
     <Layout>
       {(() => {
         if (isLoading) {
-          return <Text>Loading...</Text>;
+          return <LoadingIndicator />;
         }
         if (error) {
           return <WeatherDataErrorMessage error={error} />;
         }
         if (weatherData) {
           return (
-            <>
+            <View style={styles.container}>
               <WeatherSummary data={weatherData} />
-              <Button
-                title="Delete from saved locations"
-                onPress={handleDelete}
-              />
-            </>
+              <Button onPress={handleDelete}>Delete</Button>
+            </View>
           );
         }
         return null;
@@ -76,3 +79,10 @@ export function SavedDetailScreen({
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+  },
+});

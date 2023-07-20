@@ -1,16 +1,17 @@
 import React, { useCallback, useState } from 'react';
-import { Button, Text } from 'react-native';
-import { Layout } from '../components';
+import { Layout, LocationsList } from '../components';
 import { useFocusEffect } from '@react-navigation/native';
 import { getSavedLocationsFromStorage } from '../utils/saved-locations-storage';
 import { SavedIndexScreenProps } from '../router';
+import { Text } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
 
 export function SavedIndexScreen({
   navigation,
 }: SavedIndexScreenProps): JSX.Element {
   const [savedLocations, setSavedLocations] = useState<Set<string>>(new Set());
 
-  function handlePress(location: string) {
+  function handleLocationPress(location: string) {
     navigation.navigate('Detail', { location });
   }
 
@@ -31,17 +32,24 @@ export function SavedIndexScreen({
     <Layout>
       {(() => {
         if (savedLocationsArray.length === 0) {
-          return <Text>No saved locations found.</Text>;
+          return (
+            <Text style={styles.noLocations}>No saved locations found.</Text>
+          );
         }
 
-        return savedLocationsArray.map((location) => (
-          <Button
-            key={location}
-            title={location}
-            onPress={() => handlePress(location)}
+        return (
+          <LocationsList
+            locations={savedLocationsArray}
+            onLocationPress={handleLocationPress}
           />
-        ));
+        );
       })()}
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  noLocations: {
+    textAlign: 'center',
+  },
+});

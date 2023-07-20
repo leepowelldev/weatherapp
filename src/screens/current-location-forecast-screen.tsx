@@ -1,8 +1,8 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
 import {
   CurrentLocationErrorMessage,
   Layout,
+  LoadingIndicator,
   WeatherDataErrorMessage,
   WeatherForecast,
 } from '../components';
@@ -24,23 +24,21 @@ export function CurrentLocationForecastScreen(): JSX.Element {
 
   return (
     <Layout>
-      <ScrollView>
-        {(() => {
-          if (isLoading) {
-            return <Text>Loading...</Text>;
-          }
-          if (currentLocationError) {
-            return <CurrentLocationErrorMessage error={currentLocationError} />;
-          }
-          if (weatherDataError) {
-            return <WeatherDataErrorMessage error={weatherDataError} />;
-          }
-          if (weatherData) {
-            return <WeatherForecast data={weatherData} />;
-          }
-          return null;
-        })()}
-      </ScrollView>
+      {(() => {
+        if (isLoading) {
+          return <LoadingIndicator />;
+        }
+        if (currentLocationError) {
+          return <CurrentLocationErrorMessage error={currentLocationError} />;
+        }
+        if (weatherDataError) {
+          return <WeatherDataErrorMessage error={weatherDataError} />;
+        }
+        if (weatherData) {
+          return <WeatherForecast data={weatherData} />;
+        }
+        return null;
+      })()}
     </Layout>
   );
 }

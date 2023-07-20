@@ -1,14 +1,16 @@
 import React from 'react';
-import { Button, Text } from 'react-native';
 import {
+  Button,
   CurrentLocationErrorMessage,
   Layout,
+  LoadingIndicator,
   WeatherDataErrorMessage,
-  WeatherIcon,
+  WeatherSummary,
 } from '../components';
 import { useCurrentWeather } from '../hooks';
 import { CurrentLocationIndexScreenProps } from '../router';
 import { useCurrentLocation } from '../contexts';
+import { StyleSheet, View } from 'react-native';
 
 export function CurrentLocationIndexScreen({
   navigation,
@@ -29,7 +31,7 @@ export function CurrentLocationIndexScreen({
     <Layout>
       {(() => {
         if (isLoading) {
-          return <Text>Loading...</Text>;
+          return <LoadingIndicator />;
         }
         if (currentLocationError) {
           return <CurrentLocationErrorMessage error={currentLocationError} />;
@@ -39,20 +41,12 @@ export function CurrentLocationIndexScreen({
         }
         if (weatherData) {
           return (
-            <>
-              <WeatherIcon code={weatherData.current.condition.code} />
-              <Text>{weatherData.location.name}</Text>
-              <Text>
-                {weatherData.location.region} / {weatherData.location.country}
-              </Text>
-              <Text>{weatherData.current.temp_c}˚</Text>
-              <Text>{weatherData.current.condition.text}</Text>
-              <Text>Last Updated: {weatherData.current.last_updated}</Text>
-              <Button
-                title="Forecast"
-                onPress={() => navigation.navigate('Forecast')}
-              />
-            </>
+            <View style={styles.container}>
+              <WeatherSummary data={weatherData} />
+              <Button onPress={() => navigation.navigate('Forecast')}>
+                5 Day Forecast
+              </Button>
+            </View>
           );
         }
         return null;
@@ -60,3 +54,11 @@ export function CurrentLocationIndexScreen({
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    flex: 1,
+  },
+});

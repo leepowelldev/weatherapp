@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Text, TextInput } from 'react-native';
-import { Layout } from '../components';
+import { Layout, LocationsList } from '../components';
 import { unitedKingdomCities } from '../united-kingdom-cities';
 import { SearchIndexScreenProps } from '../router';
+import { Searchbar, Text } from 'react-native-paper';
+import { StyleSheet, View } from 'react-native';
 
 export function SearchIndexScreen({
   navigation,
@@ -14,29 +15,48 @@ export function SearchIndexScreen({
       ? unitedKingdomCities.filter((city) => city.includes(value))
       : [];
 
+  const hasLocations = locations.length > 0;
+  const hasValue = value.length > 0;
+
   function handleChangeText(nextValue: string) {
     setValue(nextValue);
   }
 
-  function handleOptionPress(location: string) {
+  function handleLocationPress(location: string) {
     navigation.navigate('Detail', { location });
   }
 
   return (
-    <Layout>
-      <Text>Find UK City</Text>
-      <TextInput
+    <Layout noScrollView>
+      <Searchbar
+        placeholder="Search"
         value={value}
         onChangeText={handleChangeText}
-        style={{ borderWidth: 1 }}
       />
-      {locations.map((location) => (
-        <Button
-          title={location}
-          key={location}
-          onPress={() => handleOptionPress(location)}
+      <View style={styles.container}>
+        {!hasValue && (
+          <Text style={styles.text}>
+            View weather for cities within the United Kingdom.
+          </Text>
+        )}
+        {!hasLocations && hasValue && (
+          <Text style={styles.text}>No results found.</Text>
+        )}
+        <LocationsList
+          locations={locations}
+          onLocationPress={handleLocationPress}
         />
-      ))}
+      </View>
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 20,
+    flex: 1,
+  },
+  text: {
+    textAlign: 'center',
+  },
+});

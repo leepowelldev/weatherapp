@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  NativeStackNavigationOptions,
   NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
@@ -103,9 +104,17 @@ const { Navigator: SavedNavigator, Screen: SavedScreen } =
  * STACK COMPONENTS
  */
 
+const sharedScreenOptions: NativeStackNavigationOptions = {
+  title: '',
+  headerBackTitle: 'Back',
+};
+
 function CurrentLocationStack(): JSX.Element {
   return (
-    <CurrentLocationNavigator initialRouteName="Index">
+    <CurrentLocationNavigator
+      initialRouteName="Index"
+      screenOptions={sharedScreenOptions}
+    >
       <CurrentLocationScreen
         name="Index"
         component={CurrentLocationIndexScreen}
@@ -120,7 +129,10 @@ function CurrentLocationStack(): JSX.Element {
 
 function SavedStack(): JSX.Element {
   return (
-    <SavedNavigator initialRouteName="Index">
+    <SavedNavigator
+      initialRouteName="Index"
+      screenOptions={sharedScreenOptions}
+    >
       <SavedScreen name="Index" component={SavedIndexScreen} />
       <SavedScreen name="Detail" component={SavedDetailScreen} />
     </SavedNavigator>
@@ -129,7 +141,10 @@ function SavedStack(): JSX.Element {
 
 function SearchStack(): JSX.Element {
   return (
-    <SearchNavigator initialRouteName="Index">
+    <SearchNavigator
+      initialRouteName="Index"
+      screenOptions={sharedScreenOptions}
+    >
       <SearchScreen name="Index" component={SearchIndexScreen} />
       <SearchScreen name="Detail" component={SearchDetailScreen} />
     </SearchNavigator>
@@ -143,7 +158,11 @@ function SearchStack(): JSX.Element {
 export function Router(): JSX.Element {
   return (
     <RootTabsNavigator initialRouteName="CurrentLocation">
-      <RootTabsScreen name="CurrentLocation" component={CurrentLocationStack} />
+      <RootTabsScreen
+        name="CurrentLocation"
+        component={CurrentLocationStack}
+        options={{ title: 'Current Location' }}
+      />
       <RootTabsScreen name="Search" component={SearchStack} />
       <RootTabsScreen name="Saved" component={SavedStack} />
     </RootTabsNavigator>

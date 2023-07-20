@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Alert, Button, Text } from 'react-native';
+import { Alert, StyleSheet } from 'react-native';
 import { SearchDetailScreenProps } from '../router';
 import { useCurrentWeather } from '../hooks';
 import {
@@ -7,7 +7,13 @@ import {
   setSavedLocationsToStorage,
 } from '../utils/saved-locations-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { WeatherSummary, Layout, WeatherDataErrorMessage } from '../components';
+import {
+  WeatherSummary,
+  Layout,
+  WeatherDataErrorMessage,
+  SaveSwitch,
+  LoadingIndicator,
+} from '../components';
 
 export type SearchDetailScreenParams = {
   location: string;
@@ -22,7 +28,7 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
 
   const isSaved = savedLocations.has(route.params.location);
 
-  async function handleSave() {
+  async function saveLocation() {
     const nextSavedLocations = new Set(savedLocations);
     nextSavedLocations.add(route.params.location);
 
@@ -34,7 +40,7 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
     }
   }
 
-  async function handleDelete() {
+  async function deleteLocation() {
     const nextSavedLocations = new Set(savedLocations);
     nextSavedLocations.delete(route.params.location);
 
@@ -44,6 +50,13 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
     } catch {
       Alert.alert('Error deleting');
     }
+  }
+
+  async function handleValueChange(shouldSave: boolean) {
+    if (shouldSave) {
+      return await saveLocation();
+    }
+    return await deleteLocation();
   }
 
   useFocusEffect(
@@ -61,7 +74,7 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
     <Layout>
       {(() => {
         if (isLoading) {
-          return <Text>Loading...</Text>;
+          return <LoadingIndicator />;
         }
         if (error) {
           return <WeatherDataErrorMessage error={error} />;
@@ -70,14 +83,11 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
           return (
             <>
               <WeatherSummary data={weatherData} />
-              {isSaved ? (
-                <Button
-                  title="Delete from saved locations"
-                  onPress={handleDelete}
-                />
-              ) : (
-                <Button title="Save to saved locations" onPress={handleSave} />
-              )}
+              <SaveSwitch
+                value={isSaved}
+                onValueChange={handleValueChange}
+                style={styles.saveSwitch}
+              />
             </>
           );
         }
@@ -86,3 +96,9 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
     </Layout>
   );
 }
+
+const styles = StyleSheet.create({
+  saveSwitch: {
+    marginTop: 30,
+  },
+});
