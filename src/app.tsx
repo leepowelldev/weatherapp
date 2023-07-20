@@ -11,15 +11,18 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Router } from './router';
 import { CurrentLocationProvider } from './contexts';
 import './env';
+import { PaperProvider } from 'react-native-paper';
 
 export function App(): JSX.Element {
   return (
-    <SafeAreaProvider>
-      <CurrentLocationProvider>
-        <NavigationContainer>
-          <Router />
-        </NavigationContainer>
-      </CurrentLocationProvider>
-    </SafeAreaProvider>
+    <PaperProvider>
+      <SafeAreaProvider>
+        <CurrentLocationProvider>
+          <NavigationContainer>
+            <Router />
+          </NavigationContainer>
+        </CurrentLocationProvider>
+      </SafeAreaProvider>
+    </PaperProvider>
   );
 }
