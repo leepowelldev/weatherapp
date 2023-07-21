@@ -6,7 +6,7 @@ import React, {
   useMemo,
   useReducer,
 } from 'react';
-import { hasLocationPermission } from '../utils/permissions';
+import { hasLocationPermissions } from '../utils/location-permissions';
 import Geolocation, { GeoError } from 'react-native-geolocation-service';
 
 type LatLong = `${number},${number}`;
@@ -90,7 +90,7 @@ export function CurrentLocationProvider({
    */
   useEffect(() => {
     (async () => {
-      const hasPermission = await hasLocationPermission();
+      const hasPermission = await hasLocationPermissions();
 
       if (hasPermission) {
         dispatch({ type: 'IS_LOADING', value: true });
