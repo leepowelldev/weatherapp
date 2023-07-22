@@ -1,3 +1,9 @@
+import { z } from 'zod';
+
+function isErrorResponse(response: unknown): response is ErrorResponse {
+  return ErrorResponse.safeParse(response).success;
+}
+
 export class WeatherApiService {
   private key: string;
   private url = 'https://api.weatherapi.com';
@@ -28,21 +34,27 @@ export class WeatherApiService {
     let json: CurrentResponse | ErrorResponse | null = null;
 
     try {
-      json = (await response.json()) as CurrentResponse | ErrorResponse;
+      json = await response.json();
     } catch {}
 
-    if (!json) {
+    if (json === null) {
       throw new Error('Invalid json response');
     }
 
     // Use api error response first
-    if ('error' in json) {
+    if (isErrorResponse(json)) {
       throw new Error(`${json.error.code}`);
     }
 
     // Otherwise fall back to status if response is no good
     if (!response.ok) {
       throw new Error(`${response.statusText} ${response.status}`);
+    }
+
+    try {
+      CurrentResponse.parse(json);
+    } catch {
+      throw new Error('Response does not match schema');
     }
 
     return json;
@@ -70,15 +82,15 @@ export class WeatherApiService {
     let json: ForecastResponse | ErrorResponse | null = null;
 
     try {
-      json = (await response.json()) as ForecastResponse | ErrorResponse;
+      json = await response.json();
     } catch {}
 
-    if (!json) {
+    if (json === null) {
       throw new Error('Invalid json response');
     }
 
     // Use api error response first
-    if ('error' in json) {
+    if (isErrorResponse(json)) {
       throw new Error(`${json.error.code}`);
     }
 
@@ -91,118 +103,133 @@ export class WeatherApiService {
   }
 }
 
-type Location = {
-  lat: number;
-  lon: number;
-  name: string;
-  region: string;
-  country: string;
-  tz_id: string;
-  localtime_epoch: number;
-  localtime: string;
-};
+const Location = z.object({
+  lat: z.number(),
+  lon: z.number(),
+  name: z.string(),
+  region: z.string(),
+  country: z.string(),
+  tz_id: z.string(),
+  localtime_epoch: z.number(),
+  localtime: z.string(),
+});
 
-type Condition = {
-  text: string;
-  icon: string;
-  code: number;
-};
+const Condition = z.object({
+  text: z.string(),
+  icon: z.string(),
+  code: z.number(),
+});
 
-type Current = {
-  last_updated_epoch: number;
-  last_updated: string;
-  temp_c: number;
-  temp_f: number;
-  is_day: number;
-  condition: Condition;
-  wind_mph: number;
-  wind_kph: number;
-  wind_degree: number;
-  wind_dir: string;
-  pressure_mb: number;
-  pressure_in: number;
-  precip_mm: number;
-  precip_in: number;
-  humidity: number;
-  cloud: number;
-  feelslike_c: number;
-  feelslike_f: number;
-  vis_km: number;
-  vis_miles: number;
-  uv: number;
-  gust_mph: number;
-  gust_kph: number;
-};
+const Current = z.object({
+  last_updated_epoch: z.number(),
+  last_updated: z.string(),
+  temp_c: z.number(),
+  temp_f: z.number(),
+  is_day: z.number(),
+  condition: Condition,
+  wind_mph: z.number(),
+  wind_kph: z.number(),
+  wind_degree: z.number(),
+  wind_dir: z.string(),
+  pressure_mb: z.number(),
+  pressure_in: z.number(),
+  precip_mm: z.number(),
+  precip_in: z.number(),
+  humidity: z.number(),
+  cloud: z.number(),
+  feelslike_c: z.number(),
+  feelslike_f: z.number(),
+  vis_km: z.number(),
+  vis_miles: z.number(),
+  uv: z.number(),
+  gust_mph: z.number(),
+  gust_kph: z.number(),
+});
 
-type Hour = Current & {
-  time_epoch: number;
-  time: string;
-  windchill_c: number;
-  windchill_f: number;
-  heatindex_c: number;
-  heatindex_f: number;
-  dewpoint_c: number;
-  dewpoint_f: number;
-  will_it_rain: number;
-  chance_of_rain: number;
-  will_it_snow: number;
-  chance_of_snow: number;
-};
+const Hour = z.intersection(
+  Current,
+  z.object({
+    time_epoch: z.number(),
+    time: z.string(),
+    windchill_c: z.number(),
+    windchill_f: z.number(),
+    heatindex_c: z.number(),
+    heatindex_f: z.number(),
+    dewpoint_c: z.number(),
+    dewpoint_f: z.number(),
+    will_it_rain: z.number(),
+    chance_of_rain: z.number(),
+    will_it_snow: z.number(),
+    chance_of_snow: z.number(),
+  })
+);
 
-type Forecast = {
-  date: string;
-  date_epoch: number;
-  day: {
-    maxtemp_c: number;
-    maxtemp_f: number;
-    mintemp_c: number;
-    mintemp_f: number;
-    avgtemp_c: number;
-    avgtemp_f: number;
-    maxwind_mph: number;
-    maxwind_kph: number;
-    totalprecip_mm: number;
-    totalprecip_in: number;
-    totalsnow_cm: number;
-    avgvis_km: number;
-    avgvis_miles: number;
-    avghumidity: number;
-    daily_will_it_rain: number;
-    daily_chance_of_rain: number;
-    daily_will_it_snow: number;
-    daily_chance_of_snow: number;
-    condition: Condition;
-    uv: number;
-  };
-  astro: {
-    sunrise: string;
-    sunset: string;
-    moonrise: string;
-    moonset: string;
-    moon_phase: string;
-    moon_illumination: string;
-    is_moon_up: number;
-    is_sun_up: number;
-  };
-  hour: Array<Hour>;
-};
+const Day = z.object({
+  maxtemp_c: z.number(),
+  maxtemp_f: z.number(),
+  mintemp_c: z.number(),
+  mintemp_f: z.number(),
+  avgtemp_c: z.number(),
+  avgtemp_f: z.number(),
+  maxwind_mph: z.number(),
+  maxwind_kph: z.number(),
+  totalprecip_mm: z.number(),
+  totalprecip_in: z.number(),
+  totalsnow_cm: z.number(),
+  avgvis_km: z.number(),
+  avgvis_miles: z.number(),
+  avghumidity: z.number(),
+  daily_will_it_rain: z.number(),
+  daily_chance_of_rain: z.number(),
+  daily_will_it_snow: z.number(),
+  daily_chance_of_snow: z.number(),
+  condition: Condition,
+  uv: z.number(),
+});
 
-export type ErrorResponse = {
-  error: {
-    code: number;
-    message: string;
-  };
-};
+const Astro = z.object({
+  sunrise: z.string(),
+  sunset: z.string(),
+  moonrise: z.string(),
+  moonset: z.string(),
+  moon_phase: z.string(),
+  moon_illumination: z.string(),
+  is_moon_up: z.number(),
+  is_sun_up: z.number(),
+});
 
-export type CurrentResponse = {
-  location: Location;
-  current: Current;
-};
+const ForecastDay = z.object({
+  date: z.string(),
+  date_epoch: z.number(),
+  day: Day,
+  astro: Astro,
+  hour: z.array(Hour),
+});
 
-export type ForecastResponse = {
-  location: Location;
-  current: Current;
-  forecast: {
-    forecastday: Array<Forecast>;
-  };
-};
+const Forecast = z.object({
+  forecastday: z.array(ForecastDay),
+});
+
+const ErrorResponse = z.object({
+  error: z.object({
+    code: z.number(),
+    message: z.string(),
+  }),
+});
+
+const CurrentResponse = z.object({
+  location: Location,
+  current: Current,
+});
+
+const ForecastResponse = z.object({
+  location: Location,
+  current: Current,
+  forecast: Forecast,
+});
+
+export type ErrorResponse = z.infer<typeof ErrorResponse>;
+
+export type CurrentResponse = z.infer<typeof CurrentResponse>;
+
+export type ForecastResponse = z.infer<typeof ForecastResponse>;
