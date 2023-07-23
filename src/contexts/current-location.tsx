@@ -11,9 +11,11 @@ import Geolocation, { GeoError } from 'react-native-geolocation-service';
 
 type LatLong = `${number},${number}`;
 
-const CurrentLocationContext = createContext<Readonly<
+export type CurrentLocationContext = Readonly<
   [State['currentLocation'], Omit<State, 'currentLocation'>]
-> | null>(null);
+> | null;
+
+const CurrentLocationContext = createContext<CurrentLocationContext>(null);
 
 type State = {
   currentLocation: LatLong | null;
@@ -133,7 +135,7 @@ export function CurrentLocationProvider({
   );
 }
 
-export function useCurrentLocation() {
+export function useCurrentLocation(): NonNullable<CurrentLocationContext> {
   const value = useContext(CurrentLocationContext);
 
   if (value === null) {
