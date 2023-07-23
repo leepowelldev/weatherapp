@@ -12,17 +12,22 @@ import { Router } from './router';
 import { CurrentLocationProvider } from './contexts';
 import './env';
 import { PaperProvider } from 'react-native-paper';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const client = new QueryClient();
 
 export function App(): JSX.Element {
   return (
-    <PaperProvider>
-      <SafeAreaProvider>
-        <CurrentLocationProvider>
-          <NavigationContainer>
-            <Router />
-          </NavigationContainer>
-        </CurrentLocationProvider>
-      </SafeAreaProvider>
-    </PaperProvider>
+    <QueryClientProvider client={client}>
+      <PaperProvider>
+        <SafeAreaProvider>
+          <CurrentLocationProvider>
+            <NavigationContainer>
+              <Router />
+            </NavigationContainer>
+          </CurrentLocationProvider>
+        </SafeAreaProvider>
+      </PaperProvider>
+    </QueryClientProvider>
   );
 }

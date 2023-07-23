@@ -16,11 +16,14 @@ export class WeatherApiService {
     }
   }
 
-  async getCurrentByLocation({
-    location,
-  }: {
-    location: string;
-  }): Promise<CurrentResponse> | never {
+  async getCurrentByLocation(
+    location: string,
+    {
+      signal,
+    }: {
+      signal?: AbortSignal;
+    } = {}
+  ): Promise<CurrentResponse> | never {
     const params = new URLSearchParams({
       key: this.key,
       q: location,
@@ -28,7 +31,10 @@ export class WeatherApiService {
     });
 
     const response = await fetch(
-      `${this.url}/v${this.version}/current.json?${params}`
+      `${this.url}/v${this.version}/current.json?${params}`,
+      {
+        signal,
+      }
     );
 
     let json: CurrentResponse | ErrorResponse | null = null;
@@ -60,13 +66,16 @@ export class WeatherApiService {
     return json;
   }
 
-  async getForecastByLocation({
-    location,
-    days,
-  }: {
-    location: string;
-    days: number;
-  }): Promise<ForecastResponse> | never {
+  async getForecastByLocation(
+    location: string,
+    {
+      days = 5,
+      signal,
+    }: {
+      days?: number;
+      signal?: AbortSignal;
+    } = {}
+  ): Promise<ForecastResponse> | never {
     const params = new URLSearchParams({
       key: this.key,
       q: location,
@@ -76,7 +85,10 @@ export class WeatherApiService {
     });
 
     const response = await fetch(
-      `${this.url}/v${this.version}/forecast.json?${params}`
+      `${this.url}/v${this.version}/forecast.json?${params}`,
+      {
+        signal,
+      }
     );
 
     let json: ForecastResponse | ErrorResponse | null = null;
