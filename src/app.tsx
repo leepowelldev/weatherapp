@@ -9,7 +9,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Router } from './router';
-import { CurrentLocationProvider } from './contexts';
+import { CurrentLocationProvider, FavouritesProvider } from './contexts';
 import './env';
 import { PaperProvider } from 'react-native-paper';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -22,9 +22,11 @@ export function App(): JSX.Element {
       <PaperProvider>
         <SafeAreaProvider>
           <CurrentLocationProvider>
-            <NavigationContainer>
-              <Router />
-            </NavigationContainer>
+            <FavouritesProvider>
+              <NavigationContainer>
+                <Router />
+              </NavigationContainer>
+            </FavouritesProvider>
           </CurrentLocationProvider>
         </SafeAreaProvider>
       </PaperProvider>

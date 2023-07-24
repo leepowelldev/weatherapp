@@ -8,9 +8,9 @@ import {
   CurrentLocationIndexScreen,
   CurrentLocationForecastScreen,
   SearchIndexScreen,
-  SavedIndexScreen,
-  SavedDetailScreen,
-  SavedDetailScreenParams,
+  FavouritesIndexScreen,
+  FavouritesDetailScreen,
+  FavouritesDetailScreenParams,
 } from './screens';
 import {
   BottomTabScreenProps,
@@ -32,7 +32,7 @@ import {
 export type RootTabsParamList = {
   CurrentLocation: NavigatorScreenParams<CurrentLocationStackParamList>;
   Search: undefined;
-  Saved: NavigatorScreenParams<SavedStackParamList>;
+  Favourites: NavigatorScreenParams<FavouritesStackParamList>;
 };
 
 export type CurrentLocationStackParamList = {
@@ -45,9 +45,9 @@ export type SearchStackParamList = {
   Detail: SearchDetailScreenParams;
 };
 
-export type SavedStackParamList = {
+export type FavouritesStackParamList = {
   Index: undefined;
-  Detail: SavedDetailScreenParams;
+  Detail: FavouritesDetailScreenParams;
 };
 
 /**
@@ -74,14 +74,14 @@ export type SearchDetailScreenProps = CompositeScreenProps<
   BottomTabScreenProps<RootTabsParamList, 'Search'>
 >;
 
-export type SavedIndexScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<SavedStackParamList, 'Index'>,
-  BottomTabScreenProps<RootTabsParamList, 'Saved'>
+export type FavouritesIndexScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<FavouritesStackParamList, 'Index'>,
+  BottomTabScreenProps<RootTabsParamList, 'Favourites'>
 >;
 
-export type SavedDetailScreenProps = CompositeScreenProps<
-  NativeStackScreenProps<SavedStackParamList, 'Detail'>,
-  BottomTabScreenProps<RootTabsParamList, 'Saved'>
+export type FavouritesDetailScreenProps = CompositeScreenProps<
+  NativeStackScreenProps<FavouritesStackParamList, 'Detail'>,
+  BottomTabScreenProps<RootTabsParamList, 'Favourites'>
 >;
 
 /**
@@ -97,8 +97,8 @@ const { Navigator: CurrentLocationNavigator, Screen: CurrentLocationScreen } =
 const { Navigator: SearchNavigator, Screen: SearchScreen } =
   createNativeStackNavigator<SearchStackParamList>();
 
-const { Navigator: SavedNavigator, Screen: SavedScreen } =
-  createNativeStackNavigator<SavedStackParamList>();
+const { Navigator: FavouritesNavigator, Screen: FavouritesScreen } =
+  createNativeStackNavigator<FavouritesStackParamList>();
 
 /**
  * STACK COMPONENTS
@@ -127,15 +127,15 @@ function CurrentLocationStack(): JSX.Element {
   );
 }
 
-function SavedStack(): JSX.Element {
+function FavouritesStack(): JSX.Element {
   return (
-    <SavedNavigator
+    <FavouritesNavigator
       initialRouteName="Index"
       screenOptions={sharedScreenOptions}
     >
-      <SavedScreen name="Index" component={SavedIndexScreen} />
-      <SavedScreen name="Detail" component={SavedDetailScreen} />
-    </SavedNavigator>
+      <FavouritesScreen name="Index" component={FavouritesIndexScreen} />
+      <FavouritesScreen name="Detail" component={FavouritesDetailScreen} />
+    </FavouritesNavigator>
   );
 }
 
@@ -164,7 +164,7 @@ export function Router(): JSX.Element {
         options={{ title: 'Current Location' }}
       />
       <RootTabsScreen name="Search" component={SearchStack} />
-      <RootTabsScreen name="Saved" component={SavedStack} />
+      <RootTabsScreen name="Favourites" component={FavouritesStack} />
     </RootTabsNavigator>
   );
 }

@@ -6,6 +6,6 @@ export * from './weather-summary';
 export * from './weather-forecast';
 export * from './error-icon';
 export * from './locations-list';
-export * from './save-switch';
 export * from './loading-indicator';
 export * from './button';
+export * from './favourite-toggle';

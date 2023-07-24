@@ -1,7 +1,5 @@
 import React from 'react';
-import { Alert, StyleSheet } from 'react-native';
-import { SearchDetailScreenProps } from '../router';
-import { useCurrentWeather } from '../hooks';
+import { Alert, StyleSheet, View } from 'react-native';
 import {
   WeatherSummary,
   Layout,
@@ -9,13 +7,17 @@ import {
   LoadingIndicator,
   FavouriteToggle,
 } from '../components';
+import { FavouritesDetailScreenProps } from '../router';
+import { useCurrentWeather } from '../hooks';
 import { useFavourites } from '../contexts';
 
-export type SearchDetailScreenParams = {
+export type FavouritesDetailScreenParams = {
   location: string;
 };
 
-export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
+export function FavouritesDetailScreen({
+  route,
+}: FavouritesDetailScreenProps): JSX.Element {
   const [favourites, { addFavourite, deleteFavourite }] = useFavourites();
 
   const [weatherData, { isLoading, error }] = useCurrentWeather(
@@ -24,7 +26,7 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
 
   const isFavourite = favourites.has(route.params.location);
 
-  async function handleValueChange(shouldSave: boolean) {
+  async function handleFavouriteToggle(shouldSave: boolean) {
     if (shouldSave) {
       return await addFavourite(route.params.location, {
         onError() {
@@ -50,14 +52,14 @@ export function SearchDetailScreen({ route }: SearchDetailScreenProps) {
         }
         if (weatherData) {
           return (
-            <>
+            <View>
               <WeatherSummary data={weatherData} />
               <FavouriteToggle
+                onToggle={handleFavouriteToggle}
                 value={isFavourite}
-                onToggle={handleValueChange}
                 style={styles.favourite}
               />
-            </>
+            </View>
           );
         }
         return null;

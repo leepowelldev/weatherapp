@@ -16,6 +16,9 @@ export class WeatherApiService {
     }
   }
 
+  /**
+   * @throws
+   */
   async getCurrentByLocation(
     location: string,
     {
@@ -66,6 +69,9 @@ export class WeatherApiService {
     return json;
   }
 
+  /**
+   * @throws
+   */
   async getForecastByLocation(
     location: string,
     {
